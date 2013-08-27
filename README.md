@@ -1,4 +1,4 @@
-snapper
-=======
+Snapper Stock Assessment Modelling
+===================================
 
-Generalised estimation of selectivity parameters for fisheries stock assessment
+This repository holds code and documents related to snappper stock assessment models developed for Australian fisheries by Mezo Research.
