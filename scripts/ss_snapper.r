@@ -27,7 +27,7 @@ cormax <- 0.95
 cormin <- 0.01
 
 # Specify model names as folder names of each set of model files, set the base case as model one;
-model.names <- c("AC_M0.20")
+model.names <- c("AC_M0.20","AC_FG")
 
 # Specify if summary table (.tex) of model comparisons should be saved to file (this summary shown to screen by default);
 save.summary <- FALSE
@@ -47,13 +47,13 @@ biomass.target <- 0.50
 biomass.threshold <- 0.20
 
 # Enter TRUE/FALSE (1/0) for output options for each model (same number entries as number of models);
-include <- c(1,0)
-compare <- c(0,0)
+include <- c(1,1)
+compare <- c(1,1)
 
-hessian <- c(1,1)
-forecast <- c(0,1)
+hessian <- c(0,0)
+forecast <- c(0,0)
 
-show.plots <- c(1,0)
+show.plots <- c(0,1)
 pdf.plots <- c(0,0)
 print.plots <- c(0,0)
  
@@ -113,7 +113,7 @@ for(i in which(include==TRUE))
 if(compare.plots==TRUE){
 
 	#Get all report files into one 'biglist' and make each report list a global variable for plotting features;
-	biglist=SSgetoutput(dirvec=model.dirs[which(compare==TRUE)],forecast=TRUE,verbose=TRUE,underscore=TRUE,listlists=TRUE)
+	biglist=SSgetoutput(dirvec=model.dirs[which(compare==TRUE)],getcovar=FALSE,forecast=FALSE,verbose=TRUE,underscore=TRUE,listlists=TRUE)
 
 	#Summarise the contents of 'biglist' using the SSsummarize function
 	bigsummary=SSsummarize(biglist)
