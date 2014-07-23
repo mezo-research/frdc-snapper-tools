@@ -1,4 +1,4 @@
-# SSV3.24F
+# SSV3.24S
 # Forecast File
 # Western Victorian Snapper Stock Assessment, 2013
 # Athol Whitten, Mezo Research, athol.whitten@mezo.com.au

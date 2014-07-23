@@ -252,21 +252,3 @@
 
 0 # (0/1) read specs for more stddev reporting 
 999 # EOF
-
-# Note: There is no male or female data, so it seems strange to estimate male offsets in growth parameters. 
-# Females and males may have to be the same... for growth (for now). Note: Ling model est. offsets with no sex-specific data.
-# Entering the age-comp data with sex-specific information might help with this.
-
-# Things to do:
-# (1) Add extra ageing error, and try use of parameters for age-matrices, as per simple example.
-# (2) Make male and female growth parameters the same (or males with fixed zero offsets).
-# (3) Downweight the ageing data.
-# (4) Implement code for Francis method for age and length re-weighting.
-# (5) Check creation of length data (R file): producing outputs as expected?
-# (6) Check estimation of M: No age-comp data so this should be hard to estimate.
-# (7) Try estimating growth, but not M. Assume M = 0.2 as per other assessments.
-# (8) Get better growth estimates! Will require sex-specific age-comp data.
-# (9) Try different values of M.
-# (10) Check male vs. female growth from raw data and size at age 1 or 2 and remember this can be changed.
-# (11) Add a lot more weight to the spawning-recruit index: This should be believed more!
-# (12) Upweight all the indices, see if that makes a change.
