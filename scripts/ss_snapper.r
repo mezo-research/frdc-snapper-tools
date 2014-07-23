@@ -13,7 +13,8 @@ library(r4ss)
 # devtools::install_github("r4ss/r4ss", ref="v1.22.1")
 
 # Specify working folder (directory where subdirectories are species folders):
-folder <- "C:/Dropbox/Github/mezo-research/"
+# folder <- "C:/Dropbox/Github/mezo-research/"
+folder <- "/Users/brochowski/Dropbox/Github/mezo-research/"
 
 # Enter species name:
 species <- "snapper"
