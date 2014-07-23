@@ -13,10 +13,10 @@ library(r4ss)
 # devtools::install_github("r4ss/r4ss", ref="v1.22.1")
 
 # Specify working folder (directory where subdirectories are species folders):
-folder <- "C:/Dropbox/Fisheries/DEPI/Assessment"
+folder <- "C:/Dropbox/Github/mezo-research/"
 
 # Enter species name:
-species <- "Snapper"
+species <- "snapper"
 year <- 2013
 
 # Which plots from SS plots function required? (all = 1:27):
@@ -64,7 +64,7 @@ print.plots <- c(0,0)
 # Create model directory array and print information as such:
 model.dirs <- array()
 for(i in 1:length(model.names)){
-	next.dir <- paste(folder,year,species,"Models",model.names[i],sep="/")
+	next.dir <- paste(folder,species,"Models",model.names[i],sep="/")
 	if(retro==TRUE){next.dir <- paste(folder,species,"Retrospective",retro.year,model.names[i],sep="/")}
 	model.dirs <- append(model.dirs,next.dir)
 	}
