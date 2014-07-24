@@ -11,6 +11,10 @@ library(r4ss)
 # OR: Install required version of r4ss from Github:
 # devtools::install_github("r4ss/r4ss", ref="v1.22.1")
 
+# Set mezo-research working directory:
+if(.Platform$OS.type=="windows") setwd("C:/Dropbox/Github/mezo-research/snapper")
+if(.Platform$OS.type=="unix") setwd("/Users/brochowski/Dropbox/Github/mezo-research/")
+
 # Specify species, year:
 species <- "Snapper"
 year 		<- 2013
@@ -19,7 +23,7 @@ year 		<- 2013
 model.names <- c("AC_M0.20","AC_FG")
 
 # Which plots from SS plots function required? (all = 1:24):
-which.plots <- (1:24)
+which.plots <- (1)
 
 # Set max and min values for reporting absolute correlation between estimated parameters:
 cormax <- 0.95
@@ -33,13 +37,13 @@ biomass.threshold <- 0.20
 save.summary <- FALSE
 
 # Enter TRUE/FALSE (1/0) output options for each model specified above:
-include 		<- c(1,1)
+include 		<- c(1,0)
 hessian 		<- c(0,0)
 forecast 		<- c(0,0)
 compare 		<- c(1,1)
 do.plots 		<- c(1,1)
-png.plots 	<- c(1,1) # Note: Cannot print to png and pdf at same time.
-pdf.plots 	<- c(1,1) # If both TRUE, png given precedence.
+png.plots 	<- c(0,0) # Note: Cannot print to png and pdf at same time.
+pdf.plots 	<- c(0,0) # If both TRUE, png given precedence.
 
 # Specify if model comparison functions (including plots) are required:
 compare.plots <- FALSE
