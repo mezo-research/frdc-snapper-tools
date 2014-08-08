@@ -14,3 +14,6 @@ Integrated stock assessment modelling of the form presented here, allows for qua
 
 ## Assessment Model
 The 2013 snapper stock assessment model is implemented using Stock Synthesis Version 3 [Methot and Wetzel, 2013](http://dx.doi.org/doi:10.1016/j.fishres.2012.10.012). The base-case model files available here (see the `BC` folder) are configured to describe a one-stock, one-area fishery with multiple 'fleets', and thus draws upon the 'areas as fleets' [Cope and Punt, 2011](http://dx.doi.org/10.1016/j.fishres.2010.10.002) method to account for multiple ...
+
+## Management Strategy Evaluation
+Mezo Research is undertaking the development of a Management Strategy Evaluation for the Western Victorian Snapper Stock. 
