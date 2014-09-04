@@ -121,7 +121,9 @@ for(i in which(include==TRUE)){
 			datplot=TRUE			
 		)
 
-		SS_html(replist=replist,openfile=FALSE)
+		if(png.plots[i]==TRUE){
+			SS_html(replist=replist,openfile=FALSE)
+		}
 	}
 }
 
