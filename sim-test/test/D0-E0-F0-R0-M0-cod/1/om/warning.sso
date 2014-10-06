@@ -1,0 +1,7 @@
+SS-V3.24f-safe-Win64;_08/03/2012;_Stock_Synthesis_by_Richard_Methot_(NOAA)_using_ADMB_11
+Tue Aug 12 23:33:10 2014
+
+1 catch: 0 initF: 0.087 initF is reset to be 0.0
+Final gradient: 1.36035 is larger than final_conv: 0.0001
+ N warnings: 2
+Number_of_active_parameters_on_or_near_bounds: 0
