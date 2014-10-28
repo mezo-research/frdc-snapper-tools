@@ -8,6 +8,7 @@ Stock Assessment Modelling, Simulation Testing, and Management Strategy Evaluati
 - [Assessment Modelling](#assessment-model)
 - [Simulation Testing](#simulation-testing)
 - [Management Strategy Evaluation](#management-strategy-evaluation)
+- [Recreational fishing effort survey] (#recreational-fishing-effort-survey)
 
 ## Overview
 The Victorian snapper fishery is divided into eastern and western stocks for management purposes. The two stocks are managed separately by the Department of Environment and Primary Industries (Fisheries Victoria). This project focusses on the *Western Victorian* snapper fishery which encompasses waters from the west of Wilsons Promontory to the South Australian and Victorian border, including Port Phillip Bay and Western Port Bay. The Victorian snapper fishery is multi-sectoral (it comprises both commercial and recreational components) and multi-jurisdictional (the commercial sector is subject to both Victorian and Commonwealth licensing arrangements).
@@ -22,3 +23,13 @@ A simulation testing framework for the Western Victorian snapper stock is being 
 
 ## Management Strategy Evaluation
 The development of a Management Strategy Evaluation for the Western Victorian Snapper stock is scheduled for 2015.
+
+## Recreational fishing effort survey
+Fisheries Victoria are currently engaged in a monitoring program for the recreational snapper fishery, using video cameras at the five major boat ramps in Port Phillip Bay. The cameras are currently collecting an image every minute, which will translate to approximately 1 million images by mid 2015. As comprehensive human analysis of all the images is infeasible, a subsampling methodology will be required.
+
+Fisheries Victoria will engage MEZO Research to develop a technique for sampling the image data from the cameras. MEZO will have access to the raw data in a SQL database (or similar). Key questions include:
+- what level of survey is needed to give an acceptable estimate of total fishing effort?
+- what are the relative cost implications of human checking vs image recognition software?
+- How should the current camera arrangement be modified for the best results from future surveys?
+
+MEZO will develop a data sampling methodology to give a >95% reliable estimate of the true effort. This will require a certain amount of truthing against human-validated results. 
