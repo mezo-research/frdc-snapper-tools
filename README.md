@@ -21,6 +21,11 @@ Integrated stock assessment modelling of the form presented here, allows for qua
 ## Simulation Testing
 A simulation testing framework for the Western Victorian snapper stock is being developed with the use of `ss3sim`, an R package that facilitates reproducible, flexible, and rapid end-to-end simulation testing with SS3 ([Anderson et al. 2014](http://www.plosone.org/article/info%3Adoi%2F10.1371%2Fjournal.pone.0092725)).
 
+### Prototyping
+1. Explanation of ss3sim set-up
+2. Testing procedure
+3. Example simulation testing outputs
+
 ## Management Strategy Evaluation
 Management Strategy Evaluation (MSE) is a technique for assessing the performance of a particular management approach against pre-defined management goals. The MSE approach involves specifiying the objectives for the management (which may involve ecological, social and economic dimensions) applying the management measures to the fishery, asessing the performance of the management through data collection and stock assessment modelling, and evaluating those performance measures against pre-defined objectives. 
 
@@ -28,16 +33,27 @@ In practice, only one management strategy can be implemented in a real-world fis
 
 The development of a Management Strategy Evaluation for the Western Victorian Snapper stock is scheduled for 2015.
 
-### Developing MSE Tools
+### Developing Simulation Tools
 
-Figure 1: Designing an MSE framework for the the Western Victorian Snapper fishery. Adapted from [Schnute et al. 2007](doi: 10.1093/icesjms/fsm109) ![Mezo Research MSE Framework Diagram](https://github.com/mezo-research/snapper/blob/master/images/mse-framework.png "Snapper MSE Framework")
+Figure 1: Designing an MSE framework for the the Western Victorian Snapper fishery. Adapted from [Schnute et al. 2007](doi: 10.1093/icesjms/fsm109) ![Mezo Research MSE Framework Diagram](https://github.com/Mezo-research/snapper/blob/master/images/mse-framework.png "Snapper MSE Framework")
 
-## Recreational fishing effort survey
+### Candidate Harvest Strategies
+
+The following list of harvest strategies and control rules have been used internationally for fisheries management:
+
+1.
+2.
+3.
+4.
+
+
+## Recreational Fishing Effort Survey
 Fisheries Victoria are currently engaged in a monitoring program for the recreational snapper fishery, using video cameras at the five major boat ramps in Port Phillip Bay. The cameras are currently collecting an image every minute, which will translate to approximately 1 million images by mid 2015. As comprehensive human analysis of all the images is infeasible, a subsampling methodology will be required.
 
-Fisheries Victoria will engage MEZO Research to develop a technique for sampling the image data from the cameras. MEZO will have access to the raw data in a SQL database (or similar). Key questions include:
-- what level of survey is needed to give an acceptable estimate of total fishing effort?
-- what are the relative cost implications of human checking vs image recognition software?
-- How should the current camera arrangement be modified for the best results from future surveys?
+Fisheries Victoria will engage Mezo Research to develop a technique for sampling the image data from the cameras. Mezo Research will have access to the raw data in a SQL database (or similar). Key questions include:
 
-MEZO will develop a data sampling methodology to give a >95% reliable estimate of the true effort. This will require a certain amount of truthing against human-validated results. 
+1. What level of survey is needed to give an acceptable estimate of total fishing effort?
+2. What are the relative cost implications of human checking vs image recognition software?
+3. How should the current camera arrangement be modified for the best results from future surveys?
+
+Mezo Research will develop a data sampling methodology to give a reliable estimate of the true effort. This will require a certain amount of skill-testing against human-validated results. 
