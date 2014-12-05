@@ -30,7 +30,7 @@ The development of a Management Strategy Evaluation for the Western Victorian Sn
 
 ### Developing MSE Tools
 
-Figure 1: Designing an MSE framework for the the Western Victorian Snapper fishery. Adapted from [Schnute et al. 2007](doi: 10.1093/icesjms/fsm109) ![Mezo Research MSE Framework Diagram](https://github.com/mezo-research/snapper/raw/master/src/common/images/mse-framework.png "Snapper MSE Framework")
+Figure 1: Designing an MSE framework for the the Western Victorian Snapper fishery. Adapted from [Schnute et al. 2007](doi: 10.1093/icesjms/fsm109) ![Mezo Research MSE Framework Diagram](https://github.com/mezo-research/snapper/blob/master/images/mse-framework.png "Snapper MSE Framework")
 
 ## Recreational fishing effort survey
 Fisheries Victoria are currently engaged in a monitoring program for the recreational snapper fishery, using video cameras at the five major boat ramps in Port Phillip Bay. The cameras are currently collecting an image every minute, which will translate to approximately 1 million images by mid 2015. As comprehensive human analysis of all the images is infeasible, a subsampling methodology will be required.
