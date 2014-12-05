@@ -24,6 +24,12 @@ A simulation testing framework for the Western Victorian snapper stock is being 
 ## Management Strategy Evaluation
 The development of a Management Strategy Evaluation for the Western Victorian Snapper stock is scheduled for 2015.
 
+Management Strategy Evaluation (MSE) is a technique for assessing the performance of a particular management approach against pre-defined management goals. The MSE approach involves specifiying the objectives for the management (which may involve ecological, social and economic dimensions)s applying the management measures to the fishery, asessing the performance of the management through data collection and stock assessment models, and evaluating those performance measures against the pre-defined objectives. 
+
+In practice, only one management strategy can be implemented in a real-world fishery at any given time. So that alternative candidate management strategies can be compared, MSE typpically employs a simulation of the fishery and the biological and/or socioeconomic system. The MSE approach explicitly seeks to identify and model uncertainties, and understand how those uncertainties may affect performance measures.
+
+
+
 ## Recreational fishing effort survey
 Fisheries Victoria are currently engaged in a monitoring program for the recreational snapper fishery, using video cameras at the five major boat ramps in Port Phillip Bay. The cameras are currently collecting an image every minute, which will translate to approximately 1 million images by mid 2015. As comprehensive human analysis of all the images is infeasible, a subsampling methodology will be required.
 
