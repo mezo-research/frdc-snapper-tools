@@ -30,7 +30,7 @@ A simulation testing framework for the Western Victorian snapper stock is being 
 The development of a Management Strategy Evaluation (MSE) framework and modelling tool for the Western Victorian Snapper stock is scheduled for 2015. MSE is a technique for assessing the performance of alternative management procedures against pre-defined objectives; MSE modelling frameworks allow managers and other stakeholders to test a range of management procedures and performance indicators in both a conceptual and simulation modelling context. Management objectives in a fishery context often encompass ecological, social, and economic dimensions, meaning a range of considerations must be made when developing a fishery MSE framework.  In a real-world fishery, only one management strategy can be implemented at any given time. So that alternative candidate management strategies can be compared, MSE typically employs simulation modelling of a fishery and its biological and/or socioeconomic components. The MSE approach explicitly seeks to identify and model uncertainties, and to improve understanding of how those uncertainties may affect performance measures and thus management. The development of an MSE framework for the Western Vitotrian Snapper stock will therefore allow fishery managers, scientists,industry representatives, and other key stakeholders to ...
 
 ### Developing Simulation Tools
-Figure 1: Designing an MSE framework for the the Western Victorian Snapper fishery. Adapted from [Schnute et al. 2007](doi: 10.1093/icesjms/fsm109) ![Mezo Research MSE Framework Diagram](https://github.com/Mezo-research/snapper/blob/master/images/mse-framework.png "Snapper MSE Framework")
+Figure 1: Designing an MSE framework for the Western Victorian Snapper fishery. Adapted from [Schnute et al. 2007](10.1093/icesjms/fsm109) ![Mezo Research MSE Framework Diagram](https://github.com/Mezo-research/snapper/blob/master/images/mse-framework.png "Proposed Snapper MSE Framework")
 
 ### Candidate Harvest Strategies
 A wide range of harvest strategies, harvest control rules, and management procedures are employed around the world for fisheries mangement. The following is list of canditate harvest strategies for the Western Victorian Snapper Stock. 
@@ -42,7 +42,7 @@ A wide range of harvest strategies, harvest control rules, and management proced
 
 
 ## Recreational Fishing Effort Survey
-Fisheries Victoria are currently engaged in a monitoring program for the recreational snapper fishery, using video cameras at the five major boat ramps in Port Phillip Bay. The cameras are currently collecting an image every minute, which will translate to approximately 1 million images by mid 2015. As comprehensive human analysis of all the images is infeasible, a subsampling methodology will be required.
+Fisheries Victoria are currently engaged in a monitoring program for recreational snapper fishery, using video cameras at the five major boat ramps in Port Phillip Bay. The cameras are currently collecting an image every minute, which will translate to approximately 1 million images by mid 2015. As comprehensive human analysis of all the images is infeasible, a subsampling methodology will be required.
 
 Fisheries Victoria will engage Mezo Research to develop a technique for sampling the image data from the cameras. Mezo Research will have access to the raw data in a SQL database (or similar). Key questions include:
 
