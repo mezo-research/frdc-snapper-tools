@@ -10,7 +10,7 @@ Stock Assessment Modelling, Simulation Testing, and Management Strategy Evaluati
 - [Assessment Modelling](#assessment-modelling)
 - [Simulation Testing](#simulation-testing)
 - [Management Strategy Evaluation](#management-strategy-evaluation)
-- [Recreational Fishing Effort Survey](#recreational-fishinge-effort-survey)
+- [Recreational Fishing Effort Survey](#recreational-fishing-effort-survey)
 
 ## Overview
 The Victorian snapper fishery is divided into eastern and western stocks for management purposes. Each stock is managed separately by the Department of Environment and Primary Industries (Fisheries Victoria). This project focusses on the Western Victorian snapper stock which encompasses waters from the west of Wilsons Promontory to the South Australian and Victorian border, including Port Phillip Bay and Western Port Bay. The Victorian snapper fishery is multi-sectoral (it comprises both commercial and recreational components) and multi-jurisdictional (the commercial sector is subject to both Victorian and Commonwealth licensing arrangements).
