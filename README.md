@@ -4,6 +4,8 @@ Western Victorian Snapper Modelling Project
 
 Stock Assessment Modelling, Simulation Testing, and Management Strategy Evaluation for the Western Victorian snapper fishery. By Mezo Research, Australia.
 
+**Note:** *This is a draft document under development as part of the above mentioned project. It is not intended to be used for anything other than information to interested parties. Do not cite without explicit permission from the authors at Mezo Research.*
+
 - [Overview](#stock-assessment)
 - [Assessment Modelling](#assessment-modelling)
 - [Simulation Testing](#simulation-testing)
