@@ -1,21 +1,18 @@
-# SSV3.24S
-# Starter File
-# Western Victorian Snapper Stock Assessment, 2013
-# Athol Whitten, Mezo Research, athol.whitten@mezo.com.au
+
 
 snapper.dat
 snapper.ctl
 
-0 	# 0=use init values in control file; 1=use ss3.par
-2 	# run display detail (0,1,2)
+1 	# 0=use init values in control file; 1=use ss3.par
+1 	# run display detail (0,1,2)
 1 	# detailed age-structured reports in REPORT.SSO (0,1)
 1 	# write detailed checkup.sso file (0,1)
 1 	# write parm values to ParmTrace.sso (0=no,1=good,active; 2=good,all; 3=every_iter,all_parms; 4=every,active)
 2 	# write to cumreport.sso (0=no,1=like&timeseries; 2=add survey fits)
 0 	# Include prior_like for non-estimated parameters (0,1)
 1 	# Use Soft Boundaries to aid convergence (0,1) (recommended)
-0 	# Number of bootstrap datafiles to produce
-6 	# Turn off estimation for parameters entering after this phase
+3 	# Number of bootstrap datafiles to produce
+0 	# Turn off estimation for parameters entering after this phase
 0 	# MCMC burn interval
 0 	# MCMC thin interval
 0   # jitter initial parm value by this fraction
