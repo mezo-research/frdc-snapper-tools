@@ -3,7 +3,7 @@
 snapper.dat
 snapper.ctl
 
-1 	# 0=use init values in control file; 1=use ss3.par
+0 	# 0=use init values in control file; 1=use ss3.par
 1 	# run display detail (0,1,2)
 1 	# detailed age-structured reports in REPORT.SSO (0,1)
 1 	# write detailed checkup.sso file (0,1)
@@ -12,7 +12,7 @@ snapper.ctl
 0 	# Include prior_like for non-estimated parameters (0,1)
 1 	# Use Soft Boundaries to aid convergence (0,1) (recommended)
 3 	# Number of bootstrap datafiles to produce
-0 	# Turn off estimation for parameters entering after this phase
+10 	# Turn off estimation for parameters entering after this phase
 0 	# MCMC burn interval
 0 	# MCMC thin interval
 0   # jitter initial parm value by this fraction
