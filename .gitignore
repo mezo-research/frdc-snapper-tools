@@ -1,2 +1,5 @@
 ss3_24o_*
 sims/*-sna/
+sims/report/auto
+sims/report/*.aux
+sims/report/*.log
