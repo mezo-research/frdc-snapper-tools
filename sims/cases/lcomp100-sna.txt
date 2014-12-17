@@ -1,0 +1,4 @@
+fleets; c(1,2)
+Nsamp; list(50,100)
+years;list(seq(1976,2013, by=4),seq(1976,2013, by=4))
+cpar;c(1,1)
