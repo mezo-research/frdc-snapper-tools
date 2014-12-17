@@ -42,20 +42,20 @@
  0.05 0.25 0.1 0.1 -1 0.8 -3 0 0 0 0 0.5 0 0 # VonBert_K_Fem_GP_1
  0.01 0.25 0.1 0.1 -1 0.8 -3 0 0 0 0 0.5 0 0 # CV_young_Fem_GP_1
  -3 3 0 0 -1 0.8 -3 0 0 0 0 0.5 0 0 # CV_old_Fem_GP_1
- -3 3 0 0 -1 0.8 -3 0 0 0 0 0.5 0 0 # NatM_p_1_Mal_GP_1
- -3 3 0.738998 0 -1 0.8 3 0 0 0 0 0.5 0 0 # L_at_Amin_Mal_GP_1
- -3 3 -0.192649 0 -1 0.8 2 0 0 0 0 0.5 0 0 # L_at_Amax_Mal_GP_1
- -3 3 0.657896 0 -1 0.8 3 0 0 0 0 0.5 0 0 # VonBert_K_Mal_GP_1
- -3 3 0.855728 0 -1 0.8 4 0 0 0 0 0.5 0 0 # CV_young_Mal_GP_1
- -3 3 -2.04754 0 -1 0.8 4 0 0 0 0 0.5 0 0 # CV_old_Mal_GP_1
+ #-3 3 0 0 -1 0.8 -3 0 0 0 0 0.5 0 0 # NatM_p_1_Mal_GP_1
+ #-3 3 0.738998 0 -1 0.8 3 0 0 0 0 0.5 0 0 # L_at_Amin_Mal_GP_1
+ #-3 3 -0.192649 0 -1 0.8 2 0 0 0 0 0.5 0 0 # L_at_Amax_Mal_GP_1
+ #-3 3 0.657896 0 -1 0.8 3 0 0 0 0 0.5 0 0 # VonBert_K_Mal_GP_1
+ #-3 3 0.855728 0 -1 0.8 4 0 0 0 0 0.5 0 0 # CV_young_Mal_GP_1
+ #-3 3 -2.04754 0 -1 0.8 4 0 0 0 0 0.5 0 0 # CV_old_Mal_GP_1
  -3 3 4.5e-005 0 -1 0.8 -3 0 0 0 0 0.5 0 0 # Wtlen_1_Fem
  1 4 2.795 0 -1 0.8 -3 0 0 0 0 0.5 0 0 # Wtlen_2_Fem
  25 50 36.3 0 -1 0.8 -3 0 0 0 0 0.5 0 0 # Mat50%_Fem
  -6 3 -0.25 0 -1 0.8 -3 0 0 0 0 0.5 0 0 # Mat_slope_Fem
  -3 3 1 0 -1 0.8 -3 0 0 0 0 0.5 0 0 # Eggs/kg_inter_Fem
  -3 3 0 0 -1 0.8 -3 0 0 0 0 0.5 0 0 # Eggs/kg_slope_wt_Fem
- -3 3 4.7e-005 0 -1 0.8 -3 0 0 0 0 0.5 0 0 # Wtlen_1_Mal
- 1 4 2.78 0 -1 0.8 -3 0 0 0 0 0.5 0 0 # Wtlen_2_Mal
+ #-3 3 4.7e-005 0 -1 0.8 -3 0 0 0 0 0.5 0 0 # Wtlen_1_Mal
+ #1 4 2.78 0 -1 0.8 -3 0 0 0 0 0.5 0 0 # Wtlen_2_Mal
  -4 4 0 0 -1 99 -3 0 0 0 0 0.5 0 0 # RecrDist_GP_1
  -4 4 0 0 -1 99 -3 0 0 0 0 0.5 0 0 # RecrDist_Area_1
  -4 4 0 0 -1 99 -3 0 0 0 0 0.5 0 0 # RecrDist_Seas_1
@@ -152,81 +152,56 @@
 #DisplayOnly -3.73857 # Main_RecrDev_2012
 #
 
-#Fishing Mortality info 
-0.1		# F ballpark for tuning early phases
-2000 	# F ballpark year (neg value to disable)
-3 		# F_Method:  1=Pope; 2=instan. F; 3=hybrid (hybrid is recommended)
-4		# max F or harvest rate, depends on F_Method
-5 		#N iterations for tuning F in hybrid method (recommend 3 to 7)
-
 ##Fishing Mortality info 
-#0.1 # F ballpark for annual F (=Z-M) for specified year
-#-2000 # F ballpark year (neg value to disable)
-#3 # F_Method:  1=Pope; 2=instan. F; 3=hybrid (hybrid is recommended)
-#4 # max F or harvest rate, depends on F_Method
-## no additional F input needed for Fmethod 1
-## if Fmethod=2; read overall start F value; overall phase; N detailed inputs to read
-## if Fmethod=3; read N iterations for tuning for Fmethod 3
-#0.2 1 1 # overall start F value; overall phase; N detailed inputs to read
-## N iterations for tuning F in hybrid method (recommend 3 to 7)
-##Fleet  Year   Seas    F_value  SE     Phase
-#1	1913	1	0.004	0.005	-1
+#0.1		# F ballpark for tuning early phases
+#2000 	# F ballpark year (neg value to disable)
+#3 		# F_Method:  1=Pope; 2=instan. F; 3=hybrid (hybrid is recommended)
+#4		# max F or harvest rate, depends on F_Method
+#5 		#N iterations for tuning F in hybrid method (recommend 3 to 7)
+
+# TODO tried unsuccessfully to get F_method to be 2
+#Fishing Mortality info 
+0.1 # F ballpark for annual F (=Z-M) for specified year
+-2000 # F ballpark year (neg value to disable)
+2 # F_Method:  1=Pope; 2=instan. F; 3=hybrid (hybrid is recommended)
+4 # max F or harvest rate, depends on F_Method
+# no additional F input needed for Fmethod 1
+# if Fmethod=2; read overall start F value; overall phase; N detailed inputs to read
+# if Fmethod=3; read N iterations for tuning for Fmethod 3
+0.2 1 1 # overall start F value; overall phase; N detailed inputs to read
+# N iterations for tuning F in hybrid method (recommend 3 to 7)
+#Fleet  Year   Seas    F_value  SE     Phase
+1	1978	1	0.004	0.005	-1
 
 #_initial_F_parms
 #_LO HI INIT PRIOR PR_type SD PHASE
 0 1 0.015141 0 -1 99 1 # InitF_1Long_Line
-0 1 0.020022 0 -1 99 1 # InitF_2Haul_Seine
-0 1 0.0152549 0 -1 99 1 # InitF_3Comm_Other
-0 1 0.0264141 0 -1 99 1 # InitF_4RR_Pinky
-0 1 0.00717991 0 -1 99 1 # InitF_5RR_Adult
-0 1 0.00299162 0 -1 99 1 # InitF_6Rec_Other
-
- #0 1 0.00299162 0 -1 99 1 # InitF_6Rec_Other # added 12/16 from line above, as place holder for seemingly missing fleet CCM
- #0 1 0.00299162 0 -1 99 1 # InitF_6Rec_Other # added 12/16 from line above, as place holder for seemingly missing fleet CCM
-
 #_Q_setup
  # Q_type options:  <0=mirror, 0=float_nobiasadj, 1=float_biasadj, 2=parm_nobiasadj, 3=parm_w_random_dev, 4=parm_w_randwalk, 5=mean_unbiased_float_assign_to_parm
 #_for_env-var:_enter_index_of_the_env-var_to_be_linked
 #_Den-dep  env-var  extra_se  Q_type
  0 0 0 2 # 1 Long_Line
  0 0 0 2 # 2 Haul_Seine
- 0 0 0 2 # 3 Comm_Other
- 0 0 0 2 # 4 RR_Pinky
- 0 0 0 2 # 5 RR_Adult
- 0 0 0 2 # 6 Rec_Other
- 0 0 0 2 # 7 YOY_Survey
-#
+ #
 #_Cond 0 #_If q has random component, then 0=read one parm for each fleet with random q; 1=read a parm for each year of index
 #_Q_parms(if_any);Qunits_are_ln(q)
 #LO  HI    INIT    PRIOR  PR_type  SD   PHASE
 -3   3      0       0       -1     99     -5    # 1 Long_Line
 -3   3      0       0       -1     99     -5    # 2 Haul_Seine
--3   3      0       0       -1     99     -5    # 3 Comm_Other
--3   3      0       0       -1     99     -5    # 4 RR_Pinky
--3   3      0       0       -1     99     -5    # 5 RR_Adult
--3   3      0       0       -1     99     -5    # 6 Rec_Other
--3   3      0       0       -1     99     -5    # 7 YOY_Survey
+
 #
 #_size_selex_types
 #discard_options:_0=none;_1=define_retention;_2=retention&mortality;_3=all_discarded_dead
 #_Pattern Discard Male Special
  1 0 0 0 # 1 Long_Line
  24 0 0 0 # 2 Haul_Seine
- 5 0 0 2 # 3 Comm_Other
- 24 0 0 0 # 4 RR_Pinky
- 1 0 0 0 # 5 RR_Adult
- 5 0 0 5 # 6 Rec_Other
- 33 0 0 0 # 7 YOY_Survey
+
 #
 #_age_selex_types
 #_Pattern ___ Male Special
  10 0 0 0 # 1 Long_Line
  10 0 0 0 # 2 Haul_Seine
- 10 0 0 0 # 3 Comm_Other
- 10 0 0 0 # 4 RR_Pinky
- 10 0 0 0 # 5 RR_Adult
- 10 0 0 0 # 6 Rec_Other
- 10 0 0 0 # 7 YOY_Survey
+ 
 #_LO HI INIT PRIOR PR_type SD PHASE env-var use_dev dev_minyr dev_maxyr dev_stddev Block Block_Fxn
  20 80 44.5104 0 -1 99 2 0 0 0 0 0.5 0 0 # SizeSel_1P_1_Long_Line
  1 22 11.0351 0 -1 99 3 0 0 0 0 0.5 0 0 # SizeSel_1P_2_Long_Line
@@ -236,18 +211,7 @@
  -1 9 3.62088 0 -1 99 3 0 0 0 0 0.5 0 0 # SizeSel_2P_4_Haul_Seine
  -25 -10 -17.7889 0 -1 99 5 0 0 0 0 0.5 0 0 # SizeSel_2P_5_Haul_Seine
  -15 5 -4.56702 0 -1 99 5 0 0 0 0 0.5 0 0 # SizeSel_2P_6_Haul_Seine
- 0 0 0 0 -1 99 -1 0 0 0 0 0.5 0 0 # SizeSel_3P_1_Comm_Other
- 0 0 0 0 -1 99 -1 0 0 0 0 0.5 0 0 # SizeSel_3P_2_Comm_Other
- 15 35 22.8481 0 -1 99 2 0 0 0 0 0.5 0 0 # SizeSel_4P_1_RR_Pinky
- -20 10 -6.76385 0 -1 99 3 0 0 0 0 0.5 0 0 # SizeSel_4P_2_RR_Pinky
- -1 5 0.124211 0 -1 99 4 0 0 0 0 0.5 0 0 # SizeSel_4P_3_RR_Pinky
- -1 7 3.59552 0 -1 99 3 0 0 0 0 0.5 0 0 # SizeSel_4P_4_RR_Pinky
- -10 0 -4.18991 0 -1 99 5 0 0 0 0 0.5 0 0 # SizeSel_4P_5_RR_Pinky
- -9 3 -2.53848 0 -1 99 5 0 0 0 0 0.5 0 0 # SizeSel_4P_6_RR_Pinky
- 20 44 33.4581 0 -1 99 2 0 0 0 0 0.5 0 0 # SizeSel_5P_1_RR_Adult
- 8 16 14.3125 0 -1 99 3 0 0 0 0 0.5 0 0 # SizeSel_5P_2_RR_Adult
- 0 0 0 0 -1 99 -1 0 0 0 0 0.5 0 0 # SizeSel_6P_1_Rec_Other
- 0 0 0 0 -1 99 -1 0 0 0 0 0.5 0 0 # SizeSel_6P_2_Rec_Other
+ 
 #_Cond 0 #_custom_sel-env_setup (0/1) 
 #_Cond -2 2 0 0 -1 99 -2 #_placeholder when no enviro fxns
 #_Cond 0 #_custom_sel-blk_setup (0/1) 
