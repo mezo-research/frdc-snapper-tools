@@ -1,7 +1,7 @@
 
 
-snapper.dat
-snapper.ctl
+snaOM.dat
+snaOM.ctl
 
 1 	# 0=use init values in control file; 1=use ss3.par
 1 	# run display detail (0,1,2)
