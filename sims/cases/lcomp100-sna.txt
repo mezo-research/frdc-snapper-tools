@@ -1,5 +1,5 @@
 fleets; c(1,2)
-Nsamp; list(50,100)
-years;list(seq(1978,2013, by=4),seq(1978,2013, by=4))
+Nsamp; list(50,200)
+years;list(seq(1978,2013, by=2),seq(1978,2013, by=2))
 cpar;c(1,1)
 lengthbin_vector;NULL
