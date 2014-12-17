@@ -159,7 +159,6 @@
 #4		# max F or harvest rate, depends on F_Method
 #5 		#N iterations for tuning F in hybrid method (recommend 3 to 7)
 
-# TODO tried unsuccessfully to get F_method to be 2
 #Fishing Mortality info 
 0.1 # F ballpark for annual F (=Z-M) for specified year
 -2000 # F ballpark year (neg value to disable)
