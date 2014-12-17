@@ -86,6 +86,8 @@ setwd("../..")
 ### Testing for creating the EM
 ## Create .dat file iwth lots of data to test functions and that it runs
 ## properly
+## NOTE: I copied over the OM files manually and then ran this to create
+## the data.
 infile <- SS_readdat("models/sna-em/snapper_all_data.dat", verbose=FALSE)
 sample_agecomp(infile=infile,
                outfile="models/sna-em/snapper.dat", Nsamp=list(100,100),
@@ -98,3 +100,8 @@ infile <- SS_readdat("models/sna-em/snapper.dat", verbose=FALSE)
 sample_index(infile=infile, fleets=c(1,2),
                outfile="models/sna-em/snapper.dat", sds_obs=list(.05,.05),
                years=list(seq(1978, 2013, by=5),seq(1978, 2013, by=5)))
+## Run it manually and then come back here
+ssb.om <- get.ssb("models/sna-om")
+ssb.em <- get.ssb("models/sna-em")
+ssb.re <- (ssb.om-ssb.em)/ssb.om
+plot(ssb.re)
