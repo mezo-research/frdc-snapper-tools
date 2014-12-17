@@ -71,6 +71,7 @@ ggplot(results_long, aes(x=variable, y=value)) + facet_grid("D~.")+
     theme(text = element_text(size=15),
         axis.text.x = element_text(angle=90, vjust=1))
 ggsave("plots/det_params_re.png", width=width, height=height)
+
 ## Now time series (ts) quantities
 det.ts <- read.csv("results/det_ts.csv")
 det.ts <- det.ts[, c("year", "replicate", "SpawnBio_om", "Recruit_0_om","D",
@@ -79,19 +80,20 @@ det.ts <- within(det.ts, {
     SSB_re <- (SpawnBio_om-SpawnBio_em)/SpawnBio_om
     F_re <- (F_om-F_em)/F_om
     recruits_re <- (Recruit_0_om-Recruit_0_em)/Recruit_0_om})
-ggplot(det.ts, aes(year, SpawnBio_om, group=replicate))+geom_line() +
+det.ts1 <- subset(det.ts, D=="D100")
+ggplot(det.ts1, aes(year, SpawnBio_om, group=replicate))+geom_line() +
     ylab("OM: Spawning Biomass") + facet_grid("D~.")
 ggsave("plots/det_SSB_om.png", width=width, height=height)
 ggplot(det.ts, aes(year, SSB_re, group=replicate)) + ylim(-1,1)+
     geom_line()+ylab("Relative Error: Spawning Biomass")+ facet_grid("D~.")
 ggsave("plots/det_SSB_re.png", width=width, height=height)
-ggplot(det.ts, aes(year, F_om, group=replicate))+geom_line() +
+ggplot(det.ts1, aes(year, F_om, group=replicate))+geom_line() +
     ylab("OM: Fishing Effort")+ facet_grid("D~.")
-ggsave("plots/det_SSB_om.png", width=width, height=height)
+ggsave("plots/det_F_om.png", width=width, height=height)
 ggplot(det.ts, aes(year, F_re, group=replicate)) + #ylim(-1,1)+
     geom_line()+ylab("Relative Error: Fishing Effort")+ facet_grid("D~.")
-ggsave("plots/det_SSB_re.png", width=width, height=height)
-ggplot(det.ts, aes(year, Recruit_0_om, group=replicate))+geom_line() +
+ggsave("plots/det_F_re.png", width=width, height=height)
+ggplot(det.ts1, aes(year, Recruit_0_om, group=replicate))+geom_line() +
     ylab("OM: Recruits") + ylim(0, max(det.ts$Recruit_0_om))+ facet_grid("D~.")
 ggsave("plots/det_recruits_om.png", width=width, height=height)
 ggplot(det.ts, aes(year, recruits_re, group=replicate)) + #ylim(-1,1)+
