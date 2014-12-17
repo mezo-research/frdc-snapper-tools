@@ -13,19 +13,32 @@ Fcase <- c("years; c(1976:2013)",
            paste0("fvals; c(", paste(Fvals, collapse=","), ")"))
 writeLines(Fcase, paste0(case.dir, "F0-sna.txt"))
 
-## TODO: Update these to new package. Write data files:
+## Write data files:
 index100 <- c("fleets; c(1,2)", "sds_obs;list(.05,.05)",
-              "years;list(seq(1978,2013, by=4),seq(1978,2013, by=4))",
+              "years;list(seq(1978,2013, by=2),seq(1978,2013, by=2))",
             "cpar;c(1,1)")
 writeLines(index100, paste0(case.dir, "index100-sna.txt"))
-lcomp100 <- c("fleets; c(1,2)", "Nsamp; list(50,100)",
-              "years;list(seq(1978,2013, by=4),seq(1978,2013, by=4))",
+lcomp100 <- c("fleets; c(1,2)", "Nsamp; list(50,200)",
+              "years;list(seq(1978,2013, by=2),seq(1978,2013, by=2))",
             "cpar;c(1,1)", "lengthbin_vector;NULL")
 writeLines(lcomp100, paste0(case.dir, "lcomp100-sna.txt"))
-agecomp100 <- c("fleets; c(1,2)", "Nsamp; list(50,100)",
-              "years;list(seq(1978,2013, by=4),seq(1978,2013, by=4))",
+agecomp100 <- c("fleets; c(1,2)", "Nsamp; list(50,200)",
+              "years;list(seq(1978,2013, by=2),seq(1978,2013, by=2))",
             "cpar;c(1,1)", "agebin_vector;NULL")
 writeLines(agecomp100, paste0(case.dir, "agecomp100-sna.txt"))
+## one with slightly less data
+index101 <- c("fleets; c(1,2)", "sds_obs;list(.1,.1)",
+              "years;list(seq(1978,2013, by=4),seq(1978,2013, by=4))",
+            "cpar;c(1,1)")
+writeLines(index101, paste0(case.dir, "index101-sna.txt"))
+lcomp101 <- c("fleets; c(1,2)", "Nsamp; list(50,100)",
+              "years;list(seq(1978,2013, by=4),seq(1978,2013, by=4))",
+            "cpar;c(1,1)", "lengthbin_vector;NULL")
+writeLines(lcomp101, paste0(case.dir, "lcomp101-sna.txt"))
+agecomp101 <- c("fleets; c(1,2)", "Nsamp; list(50,100)",
+              "years;list(seq(1978,2013, by=4),seq(1978,2013, by=4))",
+            "cpar;c(1,1)", "agebin_vector;NULL")
+writeLines(agecomp101, paste0(case.dir, "agecomp101-sna.txt"))
 
 ## DONT NEED THIS??
 ## ## Write a base M case. TODO: shoudl be able to delete this in new package.
