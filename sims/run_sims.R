@@ -7,8 +7,8 @@ library(devtools)
 library(r4ss)
 library(ggplot2)
 ## Might have development ss3sim around so remove it to be safe
-remove.packages("ss3sim")
-install.packages("ss3sim")
+## remove.packages("ss3sim")
+## install.packages("ss3sim")
 library(ss3sim)
 ## Setup parallel option
 ## install.packages(c("doParallel", "foreach"))
@@ -31,7 +31,7 @@ width <- 9; height <- 5.5
 ### ------------------------------------------------------------
 ## Run deterministic tests (lots of data, little process error)
 ## Check case files are read in properly
-Nsim <- 10
+Nsim <- 25
 casefiles <- list(F = "F", E="E", D = c("index","lcomp", "agecomp"))
 scenarios <- expand_scenarios(species="sna", cases=list(F=0, E=0, D=100:101))
 ## get_caseargs(cases.dir, scenarios, case_files=casefiles)
