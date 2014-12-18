@@ -80,7 +80,8 @@ det.ts <- within(det.ts, {
     recruits_re <- (Recruit_0_om-Recruit_0_em)/Recruit_0_om})
 det.ts1 <- subset(det.ts, D=="D100")
 ggplot(det.ts1, aes(year, SpawnBio_om, group=replicate))+geom_line() +
-    ylab("OM: Spawning Biomass") + facet_grid("D~.")
+    ylab("OM: Spawning Biomass") + facet_grid("D~.") +
+        ylim(0, max(det.ts1$SpawnBio_om))
 ggsave("plots/det_SSB_om.png", width=width, height=height)
 ggplot(det.ts, aes(year, SSB_re, group=replicate)) + ylim(-1,1)+
     geom_line()+ylab("Relative Error: Spawning Biomass")+ facet_grid("D~.")
@@ -136,6 +137,7 @@ Ftraj.ts$F <- as.character(Ftraj.ts$F)
 d <- merge(catch, Ftraj.ts, by.x=c("year", "F"))
 names(d) <- c("year", "F", "catch", "biomass", "effort")
 d.long <- reshape2::melt(d, c("year", "F"))
+d.long$variable <- factor(d.long$variable, levels=c("effort", "biomass", "catch"))
 ggplot(d.long, aes(x=year, y=value, group=F, color=F))+geom_line() +
     facet_wrap("variable", scales="free_y", ncol=1)
 ggsave("plots/Ftraj_multipanel.png", width=width, height=height)
