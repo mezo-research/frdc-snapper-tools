@@ -4,14 +4,25 @@
 ## Write the F trajectory, basing this on approximate fishing levels from
 ## assessment
 case.dir <- "cases/"
-Fvals <- c(0, 0.45, 0.52, 0.63, 0.54, 0.62, 0.48, 0.5, 0.45, 0.46, 0.47,
-           0.47, 0.69, 0.57, 0.58, 0.62, 0.86, 0.91, 0.89, 0.93, 0.77, 0.71,
-           0.73, 0.58, 0.71, 0.74, 0.64, 0.57, 0.59, 0.55, 0.61, 0.6, 0.62,
-           0.66, 0.63, 0.61, 0.56, 0.49)
-Fcase <- c("years; c(1976:2013)",
+Fvals100 <- c(0, 0.45, 0.52, 0.63, 0.54, 0.62, 0.48, 0.5, 0.45, 0.46, 0.47,
+           0.47, 0.69, 0.57, 0.58, 0.62, 0.86, 0.91, 0.89, 0.93, 0.77,
+           0.71, 0.73, 0.58, 0.71, 0.74, 0.64, 0.57, 0.59, 0.55, 0.61, 0.6,
+           0.62, 0.66, 0.63, 0.61, 0.56, 0.49)
+Fcase100 <- c("years; c(1976:2013)",
            "years_alter; c(1976:2013)",
-           paste0("fvals; c(", paste(Fvals, collapse=","), ")"))
-writeLines(Fcase, paste0(case.dir, "F0-sna.txt"))
+           paste0("fvals; c(", paste(Fvals100, collapse=","), ")"))
+writeLines(Fcase100, paste0(case.dir, "F100-sna.txt"))
+## Repeat but with .9 after 1995 and .4 after 1995
+Fvals101 <- c(Fvals100[1:19], rep(.95, len=length(Fvals100)-19))
+Fcase101 <- c("years; c(1976:2013)",
+           "years_alter; c(1976:2013)",
+           paste0("fvals; c(", paste(Fvals101, collapse=","), ")"))
+writeLines(Fcase101, paste0(case.dir, "F101-sna.txt"))
+Fvals102 <- c(Fvals100[1:19], rep(.4, len=length(Fvals100)-19))
+Fcase102 <- c("years; c(1976:2013)",
+           "years_alter; c(1976:2013)",
+           paste0("fvals; c(", paste(Fvals102, collapse=","), ")"))
+writeLines(Fcase102, paste0(case.dir, "F102-sna.txt"))
 
 ## Write data files:
 index100 <- c("fleets; c(1,2)", "sds_obs;list(.05,.05)",
