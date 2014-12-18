@@ -6,18 +6,114 @@
 \usepackage{float}
 
 \begin{document}
-\title{Simulation testing the red snapper stock assessment }
+\title{Simulation testing the red snapper stock assessment:\\ Update on the
+  status of the operating and estimation models}
+\author{Cole Monnahan}
 \date{\today{}}
 \maketitle
 
+This document briefly describes the initial stage of creating a simulation
+framework for the red snapper assessment model. I briefly outline the
+assessment, the software framework adopted for the simulation, and the
+process of creating the simulation models.
 
-\begin{figure}[h]
-  \centering
-    \includegraphics[width=6in]{../plots/det_SSB_om.png}
-  \caption{Spawning biomass trajectories under a constant fishing effort but different recruitment deviations (process error), for two data scenarios (rows)}
-  \label{fig:det_SSB_om}
-\end{figure}
+The assessment model (AM) is an age-structured statistical catch-at-age
+model written in Stock Synthesis (SS3). The model takes data collected from
+the fishery and survey and estimates the underlying population dynamics,
+including both biological and fishery properties of the stock. The original
+assessment model runs from 1978 to 2013 with one season, 2 sexes, 6 fishing
+fleets and 1 survey (YOY survey). Natural mortality is fixed at 0.2, and
+growth is the standard von Bertalanfy with parameters fixed for females but
+offsets estimated for males. Stock recruitment is Beverton-Holt with
+steepness fixed at 0.8 but $R_0$ estimated. Length-based selectivity is
+used for all fleets, with varying functional forms (logistic, dome-shaped,
+etc.). The model is fitted to three types of data: indices of abundance,
+length compositions, and conditional age-at-length compositions. CPUE from
+fleets run from approximately 1978-2013 and a index from the survey from
+1993-2013. There are length compositions for the fleets but not the
+survey. Instead of traditional age compositions, the assessment uses
+conditional age-at-length data. This type of data is created by taking
+lengths and ages of fish and then creating an age distribution for each
+length bin (e.g.\ 10-12cm) for each year/fleet.
 
+The properties of the fishery, such as selectivity and effort, are mostly
+important because of their impact on the estimation process (they obscure
+our ``view'' of the biology).. The biological properties (productivity,
+growth, reproduction, etc.) are considered to be inherent to the stock, and
+thus would not change under different fishing schemes. As such, for
+simulation purposes, it is the biological properties that are most
+important and the complexity of the fishery can likely be simplified down
+without losing the core biological properties.
+
+The snapper simulation framework will be conducted in \texttt{ss3sim}, an R
+package that facilitates rapid, flexible, and reproducible simulation
+testing of stock assessment models using SS3. R is used for the entire
+simulation process from specifying and running the simulations to reading,
+processing and exploring the results. A \texttt{ss3sim} study consists an
+operating model (OM) used to generate a true underlying population dynamics
+from which data are generated, and an estimation model (EM) used to
+estimate the underlying population dynamics from the generated
+data. \texttt{ss3sim} uses R functions to manipulate the OM (e.g.\ fishing
+patterns, process error, time-varying trends in parameters, etc.), as well
+as the EM (data types, turn on/off estimation of parameters, etc.), making
+it easy to induce structural differences between models. The analyst can
+thus easily manipulate the models to create combinations of different
+scenarios for which the performance of a model can be compared.
+
+The OM is derived from the AM, but is not a strict copy for several
+reasons. First, some aspects of the model inherently need to be changed to
+be usable as an operating model. For example recruitment deviations need to
+be inputted directly in the .par file. Second, the \texttt{ss3sim} package
+requires the model to have a certain structure to be usable. The myriad
+features and conditional options available to SS3 make it challenging to
+write generic functions to interact with the model. As such, certain
+features are turned off, such as 2 sexes. These features are not inherently
+impossible in the \texttt{ss3sim} framework but are simply not yet
+supported. Thus, currently unsupported features could be added for this
+specific project. Here is a cursory list of some of the more impactful
+changes made to create the OM:
+\begin{enumerate}
+\item The differences in males were removed, reducing the model to one
+  sex. This affects mortality and growth, which had estimated offsets for
+  males, but also the data which needed to be inputted by sex. Removing
+  male catches changed the catch patterns in some fleets, since some
+  (apparently) caught more of one sex in different years. (Still need to
+  investigate this).
+\item For simplicity in this first phase I removed all but the first fleet
+  and the survey. These can be added back to the model if needed at a later
+  stage.
+\item The conditional age-at-length data was replaced with standard age
+  composition data, since the former data type is not currently supported
+  by \texttt{ss3sim}, although it will be in the next 6 months. For now
+  \texttt{ss3sim} samples from true age and length compositions
+  independently and with out bias, although overdispersion is an
+  option. The next version will contain much more realistic and richer
+  options for supported data. (I am helping develop this part of the
+  package right now, for another project).
+\end{enumerate}
+
+The OM has been created, tested, and compared against the original AM. The
+OM is not a valid model in that it will have a meaningless likelihood value
+and would not be estimable. It is simply run for a single iteration, using
+the parameters specified by the analyst, to generate expected values of the
+population dynamics which can then be sampled to create ``data'' for use
+in the EM.
+
+The EM is a copy of the OM with estimation turned back on. Once realistic
+data are then passed to it, its likelihood will be meaningful and the
+parameters should be estimable. In their base form, the OM and EM have
+identical biological and fishery structure -- the only difference is on the
+statistical side. However, the analyst can readily alter either model to
+create differences. The EM has also been created and tested under some very
+basic scenarios. The first step is to pass very little recruitment
+deviation error (process error in SS3) to the OM, and extremely informative
+data to the EM to ensure that estimates are unbiased and relatively
+small. The plot folder has some examples of these tests, using a
+exploitation pattern similar to the fishery (but not exact), and very small
+recruitment deviations under two data scenarios: ``D100'' has age and
+length comps every 2 years with high sample sizes, and ``D101'' has comps
+every 4 years with lower sample sizes. We expect both to be unbiased but
+D101 to have larger relative errors.
 
 
 \end{document}

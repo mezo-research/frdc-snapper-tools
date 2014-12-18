@@ -7,8 +7,8 @@ library(devtools)
 library(r4ss)
 library(ggplot2)
 ## Might have development ss3sim around so remove it to be safe
-## remove.packages("ss3sim")
-## install.packages("ss3sim")
+remove.packages("ss3sim")
+install.packages("ss3sim")
 library(ss3sim)
 ## Setup parallel option
 ## install.packages(c("doParallel", "foreach"))
