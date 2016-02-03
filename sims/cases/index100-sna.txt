@@ -1,0 +1,4 @@
+fleets; c(1,2)
+sds_obs;list(.05,.05)
+years;list(seq(1978,2013, by=2),seq(1978,2013, by=2))
+cpar;c(1,1)
