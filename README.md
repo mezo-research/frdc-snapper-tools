@@ -34,7 +34,7 @@ A Management Strategy Evaluation (MSE) framework and modelling tool for the West
 ### Developing Simulation Tools
 Figure 1: Designing an MSE framework for the Western Victorian Snapper fishery. Adapted from [Schnute et al. 2007](http://doi.org/10.1093/icesjms/fsm109) 
 
-![Mezo Research MSE Framework Diagram](https://github.com/Mezo-research/snapper/blob/master/images/mse-framework.png "Proposed Snapper MSE Framework")
+![Mezo Research MSE Framework Diagram](https://github.com/Mezo-research/snapper/blob/master/docs/images/mse-framework.png "Proposed Snapper MSE Framework")
 
 ### Candidate Harvest Strategies
 A wide range of harvest strategies, harvest control rules, and management procedures are employed around the world for fisheries management. This project will review and consider the most successful strategies and test those in a simulation framework for the Western Victorian Snapper stock. 
