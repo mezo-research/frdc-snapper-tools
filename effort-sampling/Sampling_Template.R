@@ -9,7 +9,7 @@
 # ------------------------------------------------------------------
 
 # Set base directory to top level images folder:
-base_dir <- "/Users/awhitten/Working/PPB_Images"
+base_dir <- "/Users/awhitten/Github/mezo-research/snapper/snapper-main/effort-testing"
 
 # Set and create sampling directory:
 sample_dir <- file.path(base_dir, "Sample")
