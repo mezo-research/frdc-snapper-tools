@@ -37,7 +37,7 @@ Figure 1: Designing an MSE framework for the Western Victorian Snapper fishery. 
 ![Mezo Research MSE Framework Diagram](https://github.com/Mezo-research/snapper/blob/master/docs/images/mse-framework.png "Proposed Snapper MSE Framework")
 
 ### Candidate Harvest Strategies
-A wide range of harvest strategies, harvest control rules, and management procedures are employed around the world for fisheries management. This project will review and consider the most successful strategies and test those in a simulation framework for the Western Victorian Snapper stock. 
+A wide range of harvest strategies, harvest control rules, and management procedures are employed around the world for fisheries management. This project will review and consider a number of standard and 'successful' strategies and test those in a simulation framework for the Western Victorian Snapper stock. 
 
 ## Recreational Fishing Effort Survey
 Many coastal and estuarine fisheries around Australia are now dominated by recreational fishing. This poses a problem for assessment and sustainable fisheries management because recreational catch and effort are difficult to track. While creel surveys and diary angler-type approaches can provide information on catch composition and catch rates, critical information on fishing effort is generally missing. This element of the project trialled the use of boat ramp cameras to obtain data on overall recreational boat fishing effort in Port Phillip Bay and the adjacent Western Port Bay in Victoria, Australia.
